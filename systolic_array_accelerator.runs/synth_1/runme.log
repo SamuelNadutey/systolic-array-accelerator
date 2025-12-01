@@ -1,0 +1,229 @@
+
+*** Running vivado
+    with args -log tb_accelerator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_accelerator.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Mon Dec  1 21:23:30 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source tb_accelerator.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 367.789 ; gain = 66.215
+Command: synth_design -top tb_accelerator -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7312
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 845.922 ; gain = 477.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tb_accelerator' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:19]
+WARNING: [Synth 8-6896] loop limit (65536) exceeded inside initial block, initial block items will be ignored [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:70]
+INFO: [Synth 8-251] ------------------------------------------------------------- [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:78]
+INFO: [Synth 8-251] Starting Simulation: Weight-Stationary Systolic Array [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:79]
+INFO: [Synth 8-251] ------------------------------------------------------------- [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:80]
+WARNING: [Synth 8-11581] system function call 'time' not supported [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:112]
+INFO: [Synth 8-251] [t=1'b0] Phase 1: Loading Weights... [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:112]
+WARNING: [Synth 8-11581] system function call 'time' not supported [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:128]
+INFO: [Synth 8-251] [t=1'b0] Weights Loaded. [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:128]
+WARNING: [Synth 8-11581] system function call 'time' not supported [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:134]
+INFO: [Synth 8-251] [t=1'b0] Phase 2: Streaming Inputs... [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:134]
+WARNING: [Synth 8-11581] system function call 'time' not supported [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:152]
+INFO: [Synth 8-251] [t=1'b0] Phase 3: Verification... [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:152]
+INFO: [Synth 8-251] Simulation Complete. Please check waveforms. [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:168]
+WARNING: [Synth 8-11581] system task call 'finish' not supported [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:169]
+INFO: [Synth 8-6157] synthesizing module 'accelerator_top' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/accelerator_top.sv:19]
+	Parameter ROWS bound to: 4 - type: integer 
+	Parameter COLS bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'skew_buffer' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter DELAY bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'skew_buffer' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'skew_buffer__parameterized0' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter DELAY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'skew_buffer__parameterized0' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'skew_buffer__parameterized1' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter DELAY bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'skew_buffer__parameterized1' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'skew_buffer__parameterized2' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'skew_buffer__parameterized2' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'systolic_array' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/systolic_array.sv:19]
+	Parameter ROWS bound to: 4 - type: integer 
+	Parameter COLS bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mac_pe' [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/mac_pe.sv:19]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mac_pe' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/mac_pe.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'systolic_array' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/systolic_array.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'accelerator_top' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/accelerator_top.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'tb_accelerator' (0#1) [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:19]
+WARNING: [Synth 8-3848] Net clk in module/entity tb_accelerator does not have driver. [C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv:30]
+WARNING: [Synth 8-7129] Port clk in module skew_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module skew_buffer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 987.609 ; gain = 618.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 987.609 ; gain = 618.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 987.609 ; gain = 618.863
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 987.609 ; gain = 618.863
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 16    
++---Registers : 
+	               32 Bit    Registers := 16    
+	                8 Bit    Registers := 54    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design tb_accelerator has an empty top module
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:52 . Memory (MB): peak = 1140.566 ; gain = 771.820
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:53 . Memory (MB): peak = 1165.434 ; gain = 796.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:53 . Memory (MB): peak = 1165.434 ; gain = 796.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1364.234 ; gain = 995.488
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.234 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1494.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 81830740
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 1494.844 ; gain = 1127.055
+INFO: [Common 17-1381] The checkpoint 'C:/Users/samue/systolic_array_accelerator/systolic_array_accelerator.runs/synth_1/tb_accelerator.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file tb_accelerator_utilization_synth.rpt -pb tb_accelerator_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  1 21:24:55 2025...

@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../systolic_array_accelerator.srcs/sources_1/new/accelerator_top.sv" \
+"../../../../systolic_array_accelerator.srcs/sources_1/new/mac_pe.sv" \
+"../../../../systolic_array_accelerator.srcs/sources_1/new/skew_buffer.sv" \
+"../../../../systolic_array_accelerator.srcs/sources_1/new/systolic_array.sv" \
+"../../../../systolic_array_accelerator.srcs/sources_1/new/tb_accelerator.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
