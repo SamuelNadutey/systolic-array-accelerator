@@ -1,13 +1,13 @@
+# Vivado Junk Filters
 *.jou
 *.log
 *.pb
 *.wdb
 *.str
 *.os
-/xsim.dir/
-/.Xil/
-/project_1.cache/
-/project_1.hw/
-/project_1.ip_user_files/
-/project_1.runs/
-/project_1.sim/
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
