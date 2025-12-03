@@ -8,7 +8,7 @@ It is the hardware backend for the **[CropGuard Android App](https://github.com/
 
 ## ⚡ Architecture Highlights
 * **Weight-Stationary Dataflow:** Minimizes off-chip memory access by maximizing weight reuse (Google TPU style architecture).
-* **INT8 Quantization Support:** Optimized for quantized Convolutional Neural Networks (EfficientNet-Lite0).
+* **INT8 Quantization Support:** Optimized for quantized Convolutional Neural Networks (EfficientNet-B0).
 * **DSP-Slice Inference:** MAC units designed to map directly to FPGA DSP48E1 slices.
 * **Hardware Skewing:** Dedicated `skew_buffer` modules handle wavefront alignment, simplifying the software control layer.
 
