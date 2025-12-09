@@ -6,20 +6,20 @@ This repository contains the RTL implementation of a **Parameterizable 2D Systol
 
 It is the hardware backend for the **[CropGuard Android App](https://github.com/SamuelNadutey/CropGuard-Android)**.
 
-## ⚡ Architecture Highlights
+##  Architecture Highlights
 * **Weight-Stationary Dataflow:** Minimizes off-chip memory access by maximizing weight reuse (Google TPU style architecture).
 * **INT8 Quantization Support:** Optimized for quantized Convolutional Neural Networks (EfficientNet-B0).
 * **DSP-Slice Inference:** MAC units designed to map directly to FPGA DSP48E1 slices.
 * **Hardware Skewing:** Dedicated `skew_buffer` modules handle wavefront alignment, simplifying the software control layer.
 
-## 📂 File Structure
+##  File Structure
 * **`mac_pe.sv`**: Multiply-Accumulate Processing Element (The "Brain").
 * **`systolic_array.sv`**: Parameterizable 2D Grid Interconnect.
 * **`skew_buffer.sv`**: Data alignment and delay lines.
 * **`accelerator_top.sv`**: Top-level wrapper with skewing logic.
 * **`tb_accelerator.sv`**: Self-checking testbench with Golden Model verification.
 
-## 📊 Performance Analysis
+##  Performance Analysis
 
 ### Architectural Target (ASIC)
 * **Process Node:** 28nm Commercial Flow
@@ -32,6 +32,6 @@ It is the hardware backend for the **[CropGuard Android App](https://github.com/
 * **Clock:** 100 MHz (Verified in Testbench).
 * **Role:** Validates the systolic dataflow and control logic before ASIC synthesis.
 
-## 👨‍💻 Author
+## Author
 **Partey Samuel Nadutey**
 *Researching Hardware Acceleration for Edge AI*
